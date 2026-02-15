@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0f1220;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#app {
+  text-align: center;
+  width: 320px;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+#modeSelect button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  background: #1f2540;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#modeSelect button:hover {
+  background: #3940a0;
+}
+
+#question {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  letter-spacing: 2px;
+}
+
+#answerInput {
+  width: 100%;
+  padding: 8px;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+#info {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+#result {
+  margin-top: 10px;
+  height: 20px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 正解演出 */
+.correct {
+  animation: flashGreen 0.3s;
+}
+
+@keyframes flashGreen {
+  0% { background: #0f1220; }
+  50% { background: #134d2e; }
+  100% { background: #0f1220; }
+}
+
+/* 不正解演出 */
+.wrong {
+  animation: shake 0.3s;
+  color: #ff4c4c;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
