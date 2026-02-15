@@ -1,4 +1,4 @@
-import { main } from "./main/game.js"
+import { main } from "./game.js"
 
 function loop() {
   requestAnimationFrame(loop);
